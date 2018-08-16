@@ -35,7 +35,7 @@ class DemoModuleExampleService {
   public function getLastNode() {
     $nids = $this->nodeStorage->getQuery()
       ->sort('created', 'DESC')
-   ->range(0, 2)
+   ->range(0, 5)
       ->execute();
     $nid = reset($nids);
     return $nid ? $this->nodeStorage->load($nid) : FALSE;
